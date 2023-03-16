@@ -2,11 +2,40 @@
     <div class="house-container">
         <img class="house-skeleton" src="../../assets/house_diagram.svg">
 
-        <button  [ngClass]="MyVar == true  ? 'btn door-top-left door-openened' : 'btn door-top-left door-closed'" (click)="clickDoor()" ></button>
-        <button  [ngClass]="MyVar == true  ? 'btn door-bottom-left door-openened' : 'btn door-bottom-left door-closed'" (click)="clickDoor()" ></button>
-        <button  [ngClass]="MyVar == true  ? 'btn door-top-middle door-openened' : 'btn door-top-middle door-closed'" (click)="clickDoor()" ></button>
-        <button  [ngClass]="MyVar == true  ? 'btn door-bottom-middle door-openened' : 'btn door-bottom-middle door-closed'" (click)="clickDoor()" ></button>
-        <button  [ngClass]="MyVar == true  ? 'btn door-left door-openened' : 'btn door-left door-closed'" (click)="clickDoor()" ></button>
+
+        <img src="../../assets/bulb.svg" (click)="turnLight_TopLeft()" class= "bulb bulb-top-left">
+        <img src="../../assets/light.svg"  class="light light-top-left" *ngIf="dashboard.light_TopLeft">
+
+        <img src="../../assets/bulb.svg" (click)="turnLight_BottomLeft()" class= "bulb bulb-bottom-left">
+        <img src="../../assets/light.svg"  class="light light-bottom-left" *ngIf="dashboard.light_BottomLeft">
+
+        <img src="../../assets/bulb.svg" (click)="turnLight_TopMiddle()" class= "bulb bulb-top-middle">
+        <img src="../../assets/light.svg"  class="light light-top-middle" *ngIf="dashboard.light_TopMiddle">
+
+        <img src="../../assets/bulb.svg" (click)="turnLight_BottomMiddle()" class= "bulb bulb-bottom-middle">
+        <img src="../../assets/light.svg"  class="light light-bottom-middle" *ngIf="dashboard.light_BottomMiddle">
+
+        <img src="../../assets/bulb.svg" (click)="turnLight_Right()" class= "bulb bulb-right">
+        <img src="../../assets/long_light.svg"  class="light light-right" *ngIf="dashboard.light_Right">
+
+
+        <button
+            [ngClass]="dashboard.door_TopLeft == true  ? 'btn door door-top-left door-opened' : 'btn door door-top-left door-closed'"
+            (click)="clickDoor_TopLeft()"></button>
+        <button
+            [ngClass]="dashboard.door_BottomLeft == true  ? 'btn door door-bottom-left door-opened' : 'btn door door-bottom-left door-closed'"
+            (click)="clickDoor_BottomLeft()"></button>
+        <button
+            [ngClass]="dashboard.door_TopMiddle == true  ? 'btn door door-top-middle door-opened' : 'btn door door-top-middle door-closed'"
+            (click)="clickDoor_TopMiddle()"></button>
+        <button
+            [ngClass]="dashboard.door_BottomMiddle == true  ? 'btn door door-bottom-middle door-opened' : 'btn door door-bottom-middle door-closed'"
+            (click)="clickDoor_BottomMiddle()"></button>
+        <button
+            [ngClass]="dashboard.door_Right == true  ? 'btn door door-right door-opened' : 'btn door door-right door-closed'"
+            (click)="clickDoor_Right()"></button>
+
+
 
     </div>
 
