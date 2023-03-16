@@ -1,0 +1,13 @@
+<body class="background">
+    <div class="house-container">
+        <img class="house-skeleton" src="../../assets/house_diagram.svg">
+
+        <button  [ngClass]="MyVar == true  ? 'btn door-top-left door-openened' : 'btn door-top-left door-closed'" (click)="clickDoor()" ></button>
+        <button  [ngClass]="MyVar == true  ? 'btn door-bottom-left door-openened' : 'btn door-bottom-left door-closed'" (click)="clickDoor()" ></button>
+        <button  [ngClass]="MyVar == true  ? 'btn door-top-middle door-openened' : 'btn door-top-middle door-closed'" (click)="clickDoor()" ></button>
+        <button  [ngClass]="MyVar == true  ? 'btn door-bottom-middle door-openened' : 'btn door-bottom-middle door-closed'" (click)="clickDoor()" ></button>
+        <button  [ngClass]="MyVar == true  ? 'btn door-left door-openened' : 'btn door-left door-closed'" (click)="clickDoor()" ></button>
+
+    </div>
+
+</body>
