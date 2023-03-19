@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
+import {HttpService} from './_services/http.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent, DashboardComponent]
 })
 export class AppModule { }
