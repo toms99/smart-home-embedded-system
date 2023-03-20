@@ -1,0 +1,8 @@
+
+*.pack
+
+web-app/smart-home-web-app/.angular/cache/15.2.4/angular-webpack/3418015a04df08a8e260bf7d5e22662ab25f38c3/
+
+web-app/smart-home-web-app/.angular/cache/15.2.4/babel-webpack/
+
+*.old

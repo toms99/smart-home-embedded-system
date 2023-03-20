@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Md5} from 'ts-md5';
-// @ts-ignore
-import * as users from '../../assets/users/users.json';
+import users from '../../assets/users/users.json';
 
 @Component({
   selector: 'app-login',
@@ -24,13 +23,12 @@ export class LoginComponent implements OnInit {
     const hashed = Md5.hashStr(password);
     console.log(hashed);
     let validUser = false;
-    users.users.forEach((user: { username: any; password: string; }) => {
+    for (const user of users.users){
       if (user.username === username && user.password === hashed){
-        // @ts-ignore
         validUser = true;
-        window.location.href = '/dashboard';
+        window.location.href = '/dashboard' ;
       }
-    });
+    }
     if (!validUser){
       alert('Contraseña o usuario incorrecto');
     }
