@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 export class HttpService {
   url: string;
   constructor(private http: HttpClient) {
-    this.url = '';
+    this.url = 'http://192.168.0.109:5000/';
   }
 
   public get_api(term: string): any{

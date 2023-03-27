@@ -7,10 +7,6 @@
             <button type="button" class="btn btn-general"  (click)="turn_allLigths(false)">Apagar luces</button>
         </div>
 
-        <div class="btn-group group2" role="group" aria-label="...">
-            <button type="button" class="btn btn-general"  (click)="turn_allDoors(true)">Abrir puertas</button>
-            <button type="button" class="btn btn-general"  (click)="turn_allDoors(false)">Cerrar puertas</button>
-        </div>
 
         <img src="../../assets/bulb.svg" (click)="turnLight('TopLeft')" class="bulb bulb-top-left">
         <img src="../../assets/light.svg" class="light light-top-left" *ngIf="dashboard.light_TopLeft">
@@ -31,19 +27,19 @@
 
         <button
             [ngClass]="dashboard.door_TopLeft == true  ? 'btn door door-top-left door-opened' : 'btn door door-top-left door-closed'"
-            (click)="clickDoor('TopLeft')"></button>
+            ></button>
         <button
             [ngClass]="dashboard.door_BottomLeft == true  ? 'btn door door-bottom-left door-opened' : 'btn door door-bottom-left door-closed'"
-            (click)="clickDoor('BottomLeft')"></button>
+            ></button>
         <button
             [ngClass]="dashboard.door_TopMiddle == true  ? 'btn door door-top-middle door-opened' : 'btn door door-top-middle door-closed'"
-            (click)="clickDoor('TopMiddle')"></button>
+            ></button>
         <button
             [ngClass]="dashboard.door_BottomMiddle == true  ? 'btn door door-bottom-middle door-opened' : 'btn door door-bottom-middle door-closed'"
-            (click)="clickDoor('BottomMiddle')"></button>
+            ></button>
         <button
             [ngClass]="dashboard.door_Right == true  ? 'btn door door-right door-opened' : 'btn door door-right door-closed'"
-            (click)="clickDoor('Right')"></button>
+            ></button>
 
 
 

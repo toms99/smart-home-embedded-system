@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import {HttpService} from './_services/http.service';
+import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PictureComponent } from './modals/picture/picture.component';
@@ -23,7 +24,9 @@ import { PictureComponent } from './modals/picture/picture.component';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
+
   ],
   providers: [HttpService],
   bootstrap: [AppComponent, DashboardComponent]
