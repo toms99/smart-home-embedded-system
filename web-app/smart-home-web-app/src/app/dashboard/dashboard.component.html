@@ -2,28 +2,24 @@
     <div class="house-container">
         <img class="house-skeleton" src="../../assets/house_diagram.svg">
 
-        <div class="btn-group group1" role="group" aria-label="...">
-            <button type="button" class="btn btn-general"   (click)="turn_allLigths(true)">Prender luces</button>
-            <button type="button" class="btn btn-general"  (click)="turn_allLigths(false)">Apagar luces</button>
-        </div>
 
-
-        <img src="../../assets/bulb.svg" (click)="turnLight('TopLeft')" class="bulb bulb-top-left">
+        <img src="../../assets/bulb.svg"  class="bulb bulb-top-left">
         <img src="../../assets/light.svg" class="light light-top-left" *ngIf="dashboard.light_TopLeft">
 
-        <img src="../../assets/bulb.svg" (click)="turnLight('BottomLeft')" class="bulb bulb-bottom-left">
+        <img src="../../assets/bulb.svg"  class="bulb bulb-bottom-left">
         <img src="../../assets/light.svg" class="light light-bottom-left" *ngIf="dashboard.light_BottomLeft">
 
-        <img src="../../assets/bulb.svg" (click)="turnLight('TopMiddle')" class="bulb bulb-top-middle">
+        <img src="../../assets/bulb.svg"  class="bulb bulb-top-middle">
         <img src="../../assets/light.svg" class="light light-top-middle" *ngIf="dashboard.light_TopMiddle">
 
-        <img src="../../assets/bulb.svg" (click)="turnLight('BottomMiddle')" class="bulb bulb-bottom-middle">
+        <img src="../../assets/bulb.svg"  class="bulb bulb-bottom-middle">
         <img src="../../assets/light.svg" class="light light-bottom-middle" *ngIf="dashboard.light_BottomMiddle">
 
-        <img src="../../assets/bulb.svg" (click)="turnLight('Right')" class="bulb bulb-right">
+        <img src="../../assets/bulb.svg"  class="bulb bulb-right">
         <img src="../../assets/long_light.svg" class="light light-right" *ngIf="dashboard.light_Right">
 
         <img src="../../assets/camera.svg" (click)="shootPic()" class="camera">
+        <h3 id="distance">{{distance}}</h3>
 
         <button
             [ngClass]="dashboard.door_TopLeft == true  ? 'btn door door-top-left door-opened' : 'btn door door-top-left door-closed'"
